@@ -12,7 +12,7 @@ public class Main {
 
         for(Book book : books) {
             if(book.getYear() < 2010) {
-                System.out.println(book.toString());
+                System.out.println("Book code: " + book.hashCode() + ", " + book.toString());
             }
         }
 

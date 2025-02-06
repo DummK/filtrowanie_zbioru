@@ -11,7 +11,13 @@ public class Book {
 
     @Override
     public int hashCode() {
-        return year * 1000;
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((title == null) ? 0 : title.hashCode());
+        long temp;
+        temp = Double.doubleToLongBits(year);
+        result = prime * result + (int) (temp ^ (temp >>> 32));
+        return result;
     }
 
     @Override
